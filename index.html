@@ -1,11 +1,835 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WorkHub Central</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./css/output.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: 'Josefin Sans', sans-serif; background: url(./images/generalback.jpg); background-attachment: fixed;">
+    <!-- Navbar -->
+    <nav class="border-gray-900 bg-gray-800 text-white ">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="/" class="flex items-center flex-col">
+          <h1 class="self-center text-2xl font-semibold whitespace-nowrap">
+            WorkHub
+          </h1>
+          <span class="self-center text-2xl font-semibold">Central</span>
+        </a>
+        <div class="flex md:order-2">
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="md:hidden text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 me-1"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>
+          <div class="relative hidden md:block">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500"
+              placeholder="Location . . . "
+            />
+          </div>
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 md:hidden">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500"
+              placeholder="Search..."
+            />
+          </div>
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white bg-orange-500 rounded md:bg-transparent md:text-orange-500 md:p-0"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block py-2 px-3 text-hwite rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-hwite rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-hwite rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header section -->
+    <header
+      class="bg-center bg-cover bg-no-repeat bg-[url('https://mrwallpaper.com/images/hd/table-office-chairs-glass-window-o8b1fchejb4073vr.jpg')] bg-gray-700 bg-blend-multiply"
+    >
+      <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1
+          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl "
+        >
+          We invest in the world’s potential
+        </h1>
+        <p
+          class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
+        >
+          WorkHub Central is a modern co-working space that provides flexible
+          office solutions for freelancers, startups, and small businesses.
+        </p>
+        <div
+          class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
+        >
+          <a
+            href="#"
+            class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300"
+          >
+            Get started
+          </a>
+          <a
+            href="#"
+            class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 animate-slideRight"
+          >
+            Learn more
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- About section -->
+    <section id="about" class="py-24 bg-gray-100">
+      <h1 class="text-center text-4xl font-semibold">About Us</h1>
+      <div
+        class="flex flex-col flex-wrap lg:flex-nowrap gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:flex-row sm:gap-8"
+      >
+        <div class="flex-1 text-2xl text-justify">
+          <p>
+            WorkHub Central is a modern co-working space that provides flexible
+            office solutions for freelancers, startups, and small businesses.
+            Located in the heart of the city, WorkHub Central prides itself on
+            fostering innovation, networking, and productivity. With increasing
+            demand for remote workspaces, the company has decided to develop a
+            new website to better inform potential clients about its services
+            and streamline the booking process.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img src="./images/headerback.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Services section -->
+    <section id="services" class="py-24 ">
+      <h1 class="text-center text-4xl font-semibold">Our Services</h1>
+      <div
+        class="flex flex-col flex-wrap gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:flex-row sm:gap-8"
+      >
+        <div
+          class="flex-1 border-2 border-gray-600 p-8 rounded-lg bg-white shadow"
+        >
+          <center class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-buildings"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022M6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z"
+              />
+              <path
+                d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z"
+              />
+            </svg>
+          </center>
+          <div>
+            <h2 class="text-2xl font-semibold text-center">
+              Workspace Options
+            </h2>
+            <ul class="text-center leading-loose mt-5">
+              <li>Hot desks</li>
+              <li>Dedicated desks</li>
+              <li>Private offices</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex-1 border-2 border-gray-600 p-8 rounded-lg bg-white shadow"
+        >
+          <center class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-display"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"
+              />
+            </svg>
+          </center>
+          <div>
+            <h2 class="text-2xl font-semibold text-center">Space & Benefit</h2>
+            <ul class="text-center leading-loose mt-5">
+              <li>Meeting rooms</li>
+              <li>Review forums</li>
+              <li>Community perks</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex-1 border-2 border-gray-600 p-8 rounded-lg bg-white shadow"
+        >
+          <center class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-diagram-3"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"
+              />
+            </svg>
+          </center>
+          <div>
+            <h2 class="text-2xl font-semibold text-center">Amenities</h2>
+            <ul class="text-center leading-loose mt-5">
+              <li>Quiet zones</li>
+              <li>Brainstorming areas</li>
+              <li>Free coffee tea snacks</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex-1 border-2 border-gray-600 p-8 rounded-lg bg-white shadow"
+        >
+          <center class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-wifi"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.44 12.44 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.52.52 0 0 0 .668.05A11.45 11.45 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049"
+              />
+              <path
+                d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.46 9.46 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065m-2.183 2.183c.226-.226.185-.605-.1-.75A6.5 6.5 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.5 5.5 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091zM9.06 12.44c.196-.196.198-.52-.04-.66A2 2 0 0 0 8 11.5a2 2 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"
+              />
+            </svg>
+          </center>
+          <div>
+            <h2 class="text-2xl font-semibold text-center">Other Services</h2>
+            <ul class="text-center leading-loose mt-5">
+              <li>High-speed Wi-Fi</li>
+              <li>Printing and scanning</li>
+              <li>Virtual office</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Membership packages -->
+    <section  class="py-24">
+      <h1 class="text-center text-4xl font-semibold">Membership Packages</h1>
+      <div
+        class="grid grid-cols-1 gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:grid-cols-2 lg:grid-cols-4"
+      >
+        <div
+          class="flex-1 border-2 border-gray-600 p-8 bg-white shadow rounded-bl-[40px] hover:bg-blue-200 hover:scale-105 transition-all"
+        >
+          <center class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-person-workspace"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+              />
+              <path
+                d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z"
+              />
+            </svg>
+          </center>
+          <div>
+            <h2 class="text-2xl font-semibold text-center">Day Pass</h2>
+            <ul class="text-center leading-loose mt-5">
+              <li>Access to hot desks</li>
+              <li>Book of the month</li>
+              <li>Access to one review forum and discussion group</li>
+              <li>Refreshments x 1 – box of coffee or tea.</li>
+              <li>Bookmark and drinks mug</li>
+            </ul>
+            <hr />
+            <div class="prices text-center mt-4">
+              <span class="text-2xl font-semibold">$25</span>
+              <span class="text-sm text-gray-500">/day</span>
+            </div>
+            <div class="text-center mt-8">
+              <a
+                href="#"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex-1 border-2 border-gray-600 p-8 bg-white shadow rounded-bl-[40px] hover:bg-blue-200 hover:scale-105 transition-all"
+        >
+          <center class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-briefcase"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"
+              />
+            </svg>
+          </center>
+          <div>
+            <h2 class="text-2xl font-semibold text-center">Flex Membership</h2>
+            <ul class="text-center leading-loose mt-5">
+              <li>10 days of hot desk access per month</li>
+              <li>Discounts on meeting room bookings and workshops</li>
+              <li>Access to review forums and discussion groups</li>
+              <li>Free coffee and tea</li>
+            </ul>
+            <hr />
+            <div class="prices text-center mt-4">
+              <span class="text-2xl font-semibold">$150</span>
+              <span class="text-sm text-gray-500">/month</span>
+            </div>
+            <div class="text-center mt-8">
+              <a
+                href="#"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex-1 border-2 border-gray-600 p-8 bg-white shadow rounded-bl-[40px] hover:bg-blue-200 hover:scale-105 transition-all"
+        >
+          <center class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-laptop"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"
+              />
+            </svg>
+          </center>
+          <div>
+            <h2 class="text-2xl font-semibold text-center">Dedicated desk</h2>
+            <ul class="text-center leading-loose mt-5">
+              <li>Book of the month and three own choice books</li>
+              <li>Permanent desk in a shared workspace.</li>
+              <li>Locker for personal storage.</li>
+              <li>Priority access to meeting rooms and events.</li>
+            </ul>
+            <hr />
+            <div>
+              <div class="prices text-center mt-4">
+                <span class="text-2xl font-semibold">$200</span>
+                <span class="text-sm text-gray-500">/month</span>
+              </div>
+              <div class="text-center mt-8">
+                <a
+                  href="#"
+                  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex-1 border-2 border-gray-600 p-8 bg-white shadow rounded-bl-[40px] hover:bg-blue-200 hover:scale-105 transition-all"
+        >
+          <center class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-person-check"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+              />
+              <path
+                d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
+              />
+            </svg>
+          </center>
+          <div>
+            <h2 class="text-2xl font-semibold text-center">Private office</h2>
+            <ul class="text-center leading-loose mt-5">
+              <li>Private office space for 2–10 people</li>
+              <li>Access to all amenities</li>
+              <li>Personalized office setup options</li>
+              <li>Full 24/7 access with unlimited use of meeting rooms</li>
+              <li>Access to all amenities</li>
+            </ul>
+            <hr />
+            <div>
+              <div class="prices text-center mt-4">
+                <span class="text-2xl font-semibold">$500</span>
+                <span class="text-sm text-gray-500">/month</span>
+              </div>
+              <div class="text-center mt-8">
+                <a
+                  href="#"
+                  class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Upcoming events -->
+    <section class="py-24 ">
+      <h1 class="text-center text-4xl font-semibold">Upcoming Events</h1>
+      <div
+        class="flex flex-col justify-around flex-wrap gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:flex-row sm:gap-8"
+      >
+        <div class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]">
+          <div class="flex justify-between gap-[85px]">
+            <div class="flex gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-calendar"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                />
+              </svg>
+              <p>20-25 January</p>
+            </div>
+            <div class="flex gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-brightness-high"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                />
+              </svg>
+              <p class="text-gray-700">599 following</p>
+            </div>
+          </div>
+          <h1 class="text-xl font-semibold my-4">Networking Event</h1>
+          <div class="flex justify-between">
+            <div class="flex gap-1 text-xs mt-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                class="bi bi-geo-alt"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                />
+                <path
+                  d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                />
+              </svg>
+              <p>Tashkent, Uzbekistan</p>
+            </div>
+            <div class="bg-green-500 text-white px-4 py-1 rounded-lg">Join</div>
+          </div>
+        </div>
+        <div class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]">
+          <div class="flex justify-between gap-[85px]">
+            <div class="flex gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-calendar"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                />
+              </svg>
+              <p>1-3 February</p>
+            </div>
+            <div class="flex gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-brightness-high"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                />
+              </svg>
+              <p class="text-gray-700">654 following</p>
+            </div>
+          </div>
+          <h1 class="text-xl font-semibold my-4">Team Building Seminar</h1>
+          <div class="flex justify-between">
+            <div class="flex gap-1 text-xs mt-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                class="bi bi-geo-alt"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                />
+                <path
+                  d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                />
+              </svg>
+              <p>Tashkent, Uzbekistan</p>
+            </div>
+            <div class="bg-green-500 text-white px-4 py-1 rounded-lg">Join</div>
+          </div>
+        </div>
+        <div class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]">
+          <div class="flex justify-between gap-[85px]">
+            <div class="flex gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-calendar"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                />
+              </svg>
+              <p>25-31 January</p>
+            </div>
+            <div class="flex gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-brightness-high"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                />
+              </svg>
+              <p class="text-gray-700">456 following</p>
+            </div>
+          </div>
+          <h1 class="text-xl font-semibold my-4">Workshop on Startups</h1>
+          <div class="flex justify-between">
+            <div class="flex gap-1 text-xs mt-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                class="bi bi-geo-alt"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                />
+                <path
+                  d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                />
+              </svg>
+              <p>Tashkent, Uzbekistan</p>
+            </div>
+            <div class="bg-green-500 text-white px-4 py-1 rounded-lg">Join</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Trusted Companies -->
+    <section class="py-24 bg-white">
+      <h1 class="text-center text-4xl font-semibold">
+        Trusted by the world’s largest companies
+      </h1>
+      <div class="px-4 mx-auto mt-12 max-w-screen-xl">
+        <!-- i have to do 2 row 6 column images gallery -->
+        <div
+          class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+        >
+          <div class="flex justify-center items-center">
+            <img src="./images/micrasoft.jpg" alt="microsoft" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/paypal.jpg" alt="paypal" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/disney.jpg" alt="Disney" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/samsung.jpg" alt="Samsung" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/spotify.jpg" alt="Spotify" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/macafee.jpg" alt="Macafee" />
+          </div>
+
+          <div class="flex justify-center items-center">
+            <img src="./images/nttgroup.jpg" alt="nttgroup" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/blackrock.jpg" alt="blackrock" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/hsbc.jpg" alt="hsbc" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/accenture.jpg" alt="accenture" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/uber.jpg" alt="Uber" />
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="./images/slack.jpg" alt="slack" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-gray-100">
+      <h1 class="text-center text-4xl font-semibold">Contact Us</h1>
+      <div
+        class="grid grid-cols-1 gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:grid-cols-2"
+      >
+        <div><img src="./images//headerback.png" alt="" /></div>
+        <div>
+          <form>
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-4 sm:flex-row">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="flex-1 p-4 border border-gray-300 rounded-lg"
+                />
+                <input
+                  type="text"
+                  placeholder="Lastame"
+                  class="flex-1 p-4 border border-gray-300 rounded-lg"
+                />
+              </div>
+              <input
+                type="email"
+                placeholder="Email"
+                class="p-4 border border-gray-300 rounded-lg"
+              />
+              <textarea
+                placeholder="Message"
+                class="p-4 border border-gray-300 rounded-lg"
+              ></textarea>
+              <button
+                type="submit"
+                class="py-3 px-6 text-white bg-orange-600 rounded-lg"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center">
+      <div class="px-4 py-12 mx-auto max-w-screen-xl">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <div>
+            <h2 class="text-2xl font-semibold">WorkHub Central</h2>
+            <p class="mt-4 text-lg">
+              123 Main Street
+              <br />
+              City, State 12345
+              <br />
+              (123) 456-7890
+            </p>
+          </div>
+          <div>
+            <h2 class="text-2xl font-semibold">Quick Links</h2>
+            <ul class="mt-4 space y-2">
+              <li>
+                <a href="#" class="hover:text-orange-500">Home</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500">About</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500">Services</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-8">
+          <p class="text-sm text-gray-400">
+            Copyright &copy; 2025 WorkHub Central. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
