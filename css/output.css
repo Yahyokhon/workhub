@@ -582,8 +582,16 @@ video {
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .inset-y-0 {
   top: 0px;
+  bottom: 0px;
+}
+
+.bottom-0 {
   bottom: 0px;
 }
 
@@ -591,8 +599,8 @@ video {
   inset-inline-start: 0px;
 }
 
-.m-\[calc\(100vh-6rem\)\] {
-  margin: calc(100vh - 6rem);
+.z-50 {
+  z-index: 50;
 }
 
 .mx-auto {
@@ -611,10 +619,6 @@ video {
 
 .mb-8 {
   margin-bottom: 2rem;
-}
-
-.me-1 {
-  margin-inline-end: 0.25rem;
 }
 
 .mt-12 {
@@ -639,90 +643,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-\[calc\(100vh-6rem\)\] {
-  margin-top: calc(100vh - 6rem);
-}
-
-.mt-\[\] {
-  margin-top: ;
-}
-
-.mt-\[calc\(100vh-946rem\)\] {
-  margin-top: calc(100vh - 946rem);
-}
-
-.mt-\[calc\(100vh-94rem\)\] {
-  margin-top: calc(100vh - 94rem);
-}
-
-.mt-\[calc\(100vh-9rem\)\] {
-  margin-top: calc(100vh - 9rem);
-}
-
-.mt-\[calc\(100vh-rem\)\] {
-  margin-top: calc(100vh - rem);
-}
-
-.mt-\[calc\(100vh-1rem\)\] {
-  margin-top: calc(100vh - 1rem);
-}
-
-.mt-\[calc\(100vh-5rem\)\] {
-  margin-top: calc(100vh - 5rem);
-}
-
-.mt-\[calc\(100vh-15rem\)\] {
-  margin-top: calc(100vh - 15rem);
-}
-
-.mt-\[calc\(100vh-55rem\)\] {
-  margin-top: calc(100vh - 55rem);
-}
-
-.mt-\[1\] {
-  margin-top: 1;
-}
-
-.mt-\[10\] {
-  margin-top: 10;
-}
-
-.mt-\[100\] {
-  margin-top: 100;
-}
-
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
-.mt-\[10px\] {
-  margin-top: 10px;
-}
-
-.mt-\[50px\] {
-  margin-top: 50px;
-}
-
-.mt-\[40px\] {
-  margin-top: 40px;
-}
-
-.mt-\[0px\] {
-  margin-top: 0px;
-}
-
-.mt-\[90px\] {
-  margin-top: 90px;
-}
-
-.mt-\[60px\] {
-  margin-top: 60px;
-}
-
-.mt-\[30px\] {
-  margin-top: 30px;
 }
 
 .block {
@@ -755,10 +675,6 @@ video {
 
 .h-5 {
   height: 1.25rem;
-}
-
-.h-\[calc\(100vh-6rem\)\] {
-  height: calc(100vh - 6rem);
 }
 
 .w-10 {
@@ -833,6 +749,22 @@ video {
   gap: 85px;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -841,6 +773,14 @@ video {
 
 .self-center {
   align-self: center;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .whitespace-nowrap {
@@ -901,6 +841,20 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.5\)\] {
+  background-color: rgba(0,0,0,0.5);
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
@@ -941,40 +895,21 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[gray-100\] {
-  background-color: gray-100;
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.\)\] {
+  background-color: rgba(0,0,0,0.);
 }
 
-.bg-\[\] {
-  background-color: ;
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.9\)\] {
+  background-color: rgba(0,0,0,0.9);
 }
 
-.bg-\[u\] {
-  background-color: u;
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[ul\] {
-  background-color: ul;
-}
-
-.bg-\[ulr\] {
-  background-color: ulr;
-}
-
-.bg-\[ulrl\] {
-  background-color: ulrl;
-}
-
-.bg-\[ur\] {
-  background-color: ur;
-}
-
-.bg-\[url\] {
-  background-color: url;
-}
-
-.bg-transparent {
-  background-color: transparent;
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 
 .bg-\[url\(\'https\:\/\/mrwallpaper\.com\/images\/hd\/table-office-chairs-glass-window-o8b1fchejb4073vr\.jpg\'\)\] {
@@ -983,82 +918,6 @@ video {
 
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\)\] {
-  background-image: url();
-}
-
-.bg-\[url\(\'\'\)\] {
-  background-image: url('');
-}
-
-.bg-\[url\(\'\.\/\'\)\] {
-  background-image: url('./');
-}
-
-.bg-\[url\(\'\.\/images\/headerback\.png\'\)\] {
-  background-image: url('./images/headerback.png');
-}
-
-.bg-\[url\(\'\.\/images\/\'\)\] {
-  background-image: url('./images/');
-}
-
-.bg-\[url\(\'\.\/images\'\)\] {
-  background-image: url('./images');
-}
-
-.bg-\[url\(\'\.\/images\/g\'\)\] {
-  background-image: url('./images/g');
-}
-
-.bg-\[url\(\'\.\/images\/ge\'\)\] {
-  background-image: url('./images/ge');
-}
-
-.bg-\[url\(\'\.\/images\/gen\'\)\] {
-  background-image: url('./images/gen');
-}
-
-.bg-\[url\(\'\.\/images\/gene\'\)\] {
-  background-image: url('./images/gene');
-}
-
-.bg-\[url\(\'\.\/images\/gener\'\)\] {
-  background-image: url('./images/gener');
-}
-
-.bg-\[url\(\'\.\/images\/genera\'\)\] {
-  background-image: url('./images/genera');
-}
-
-.bg-\[url\(\'\.\/images\/general\'\)\] {
-  background-image: url('./images/general');
-}
-
-.bg-\[url\(\'\.\/images\/generalba\'\)\] {
-  background-image: url('./images/generalba');
-}
-
-.bg-\[url\(\'\.\/images\/generalbac\'\)\] {
-  background-image: url('./images/generalbac');
-}
-
-.bg-\[url\(\'\.\/images\/generalback\'\)\] {
-  background-image: url('./images/generalback');
-}
-
-.bg-\[url\(\'\.\/images\/generalback\.\'\)\] {
-  background-image: url('./images/generalback.');
-}
-
-.bg-\[url\(\'\.\/images\/generalback\.jp\'\)\] {
-  background-image: url('./images/generalback.jp');
-}
-
-.bg-\[url\(\'\.\/images\/generalback\.jpg\'\)\] {
-  background-image: url('./images/generalback.jpg');
 }
 
 .from-\[\#9795f0\] {
@@ -1087,16 +946,16 @@ video {
   padding: 0.5rem;
 }
 
-.p-2\.5 {
-  padding: 0.625rem;
-}
-
 .p-4 {
   padding: 1rem;
 }
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .px-3 {
@@ -1142,6 +1001,21 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .ps-10 {
@@ -1269,6 +1143,14 @@ video {
 
 .transition-all {
   transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }

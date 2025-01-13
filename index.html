@@ -12,11 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="https://www.shutterstock.com/image-vector/letter-w-logo-design-water-260nw-2460084569.jpg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://www.shutterstock.com/image-vector/letter-w-logo-design-water-260nw-2460084569.jpg"
+      type="image/x-icon"
+    />
   </head>
-  <body style="font-family: 'Josefin Sans', sans-serif;">
+  <body style="font-family: 'Josefin Sans', sans-serif">
     <!-- Navbar -->
-    <nav class="border-gray-900 bg-gray-800 text-white ">
+    <nav class="border-gray-900 bg-gray-800 text-white">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
@@ -27,30 +31,6 @@
           <span class="self-center text-2xl font-semibold">Central</span>
         </a>
         <div class="flex md:order-2">
-          <button
-            type="button"
-            data-collapse-toggle="navbar-search"
-            aria-controls="navbar-search"
-            aria-expanded="false"
-            class="md:hidden text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 me-1"
-          >
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
-            <span class="sr-only">Search</span>
-          </button>
           <div class="relative hidden md:block">
             <div
               class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
@@ -82,13 +62,13 @@
           <button
             data-collapse-toggle="navbar-search"
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            class="menu-btn inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden"
             aria-controls="navbar-search"
             aria-expanded="false"
           >
             <span class="sr-only">Open main menu</span>
             <svg
-              class="w-5 h-5"
+              class="w-5 h-5 menu-svg"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -100,6 +80,21 @@
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+            <svg
+              class="hidden w-5 h-5 close"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 1L1 13M1 1l12 12"
               />
             </svg>
           </button>
@@ -149,21 +144,21 @@
             <li>
               <a
                 href="#about"
-                class="block py-2 px-3 text-hwite rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+                class="block py-2 px-3 rounded md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
                 >About</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="block py-2 px-3 text-hwite rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+                href="#services"
+                class="block py-2 px-3 rounded md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
                 >Services</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="block py-2 px-3 text-hwite rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+                href="#contact"
+                class="block py-2 px-3 rounded md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
                 >Contact</a
               >
             </li>
@@ -171,13 +166,49 @@
         </div>
       </div>
     </nav>
+    <!-- Modal -->
+    <div
+      class="modal hidden overflow-y-auto overflow-x-hidden flex items-center justify-center transition-all text-white bg-gray-800"
+    >
+      <ul class="flex  py-3 ">
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 text-white bg-orange-500 rounded md:bg-transparent md:text-orange-500 md:p-0"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="block py-2 px-3 rounded md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#services"
+            class="block py-2 px-3 rounded md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="block py-2 px-3 rounded md:hover:bg-transparent md:hover:text-orange-700 md:p-0"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
     <!-- Header section -->
     <header
       class="bg-center bg-cover bg-no-repeat bg-[url('https://mrwallpaper.com/images/hd/table-office-chairs-glass-window-o8b1fchejb4073vr.jpg')] bg-gray-700 bg-blend-multiply"
     >
       <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
         <h1
-          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl "
+          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
         >
           We invest in the world’s potential
         </h1>
@@ -206,7 +237,7 @@
       </div>
     </header>
     <!-- About section -->
-    <section id="about" class="py-24 bg-gray-100">
+    <section id="about" class="py-24">
       <h1 class="text-center text-4xl font-semibold">About Us</h1>
       <div
         class="flex flex-col flex-wrap lg:flex-nowrap gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:flex-row sm:gap-8"
@@ -228,13 +259,16 @@
       </div>
     </section>
     <!-- Services section -->
-    <section id="services" class="py-24 ">
+    <section id="services" class="py-24">
       <h1 class="text-center text-4xl font-semibold">Our Services</h1>
       <div
         class="flex flex-col flex-wrap gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:flex-row sm:gap-8"
       >
         <div
-          class="flex-1 border-2 border-gray-600 p-8 rounded-lg bg-white shadow"
+          style="
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+          "
+          class="flex-1 border-2 p-8 rounded-lg shadow"
         >
           <center class="mb-4">
             <svg
@@ -265,7 +299,10 @@
           </div>
         </div>
         <div
-          class="flex-1 border-2 border-gray-600 p-8 rounded-lg bg-white shadow"
+          style="
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+          "
+          class="flex-1 border-2 p-8 rounded-lg shadow"
         >
           <center class="mb-4">
             <svg
@@ -291,7 +328,10 @@
           </div>
         </div>
         <div
-          class="flex-1 border-2 border-gray-600 p-8 rounded-lg bg-white shadow"
+          style="
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+          "
+          class="flex-1 border-2 p-8 rounded-lg shadow"
         >
           <center class="mb-4">
             <svg
@@ -318,7 +358,10 @@
           </div>
         </div>
         <div
-          class="flex-1 border-2 border-gray-600 p-8 rounded-lg bg-white shadow"
+          style="
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+          "
+          class="flex-1 border-2 p-8 rounded-lg shadow"
         >
           <center class="mb-4">
             <svg
@@ -349,7 +392,7 @@
       </div>
     </section>
     <!-- Membership packages -->
-    <section  class="py-24">
+    <section class="py-24">
       <h1 class="text-center text-4xl font-semibold">Membership Packages</h1>
       <div
         class="grid grid-cols-1 gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:grid-cols-2 lg:grid-cols-4"
@@ -525,12 +568,14 @@
       </div>
     </section>
     <!-- Upcoming events -->
-    <section class="py-24 ">
+    <section class="py-24">
       <h1 class="text-center text-4xl font-semibold">Upcoming Events</h1>
       <div
         class="flex flex-col justify-around flex-wrap gap-8 px-4 mx-auto mt-12 max-w-screen-xl sm:flex-row sm:gap-8"
       >
-        <div class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]">
+        <div
+          class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]"
+        >
           <div class="flex justify-between gap-[85px]">
             <div class="flex gap-1">
               <svg
@@ -586,7 +631,9 @@
             <div class="bg-green-500 text-white px-4 py-1 rounded-lg">Join</div>
           </div>
         </div>
-        <div class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]">
+        <div
+          class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]"
+        >
           <div class="flex justify-between gap-[85px]">
             <div class="flex gap-1">
               <svg
@@ -642,7 +689,9 @@
             <div class="bg-green-500 text-white px-4 py-1 rounded-lg">Join</div>
           </div>
         </div>
-        <div class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]">
+        <div
+          class="p-8 shadow rounded-lg bg-gradient-to-r from-[#9795f0] to-[#a6c0fe]"
+        >
           <div class="flex justify-between gap-[85px]">
             <div class="flex gap-1">
               <svg
@@ -764,22 +813,22 @@
                 <input
                   type="text"
                   placeholder="Name"
-                  class="flex-1 p-4 border border-gray-300 rounded-lg"
+                  class="flex-1 p-4 border border-gray-600 rounded-lg"
                 />
                 <input
                   type="text"
                   placeholder="Lastame"
-                  class="flex-1 p-4 border border-gray-300 rounded-lg"
+                  class="flex-1 p-4 border border-gray-600 rounded-lg"
                 />
               </div>
               <input
                 type="email"
                 placeholder="Email"
-                class="p-4 border border-gray-300 rounded-lg"
+                class="p-4 border border-gray-600 rounded-lg"
               />
               <textarea
                 placeholder="Message"
-                class="p-4 border border-gray-300 rounded-lg"
+                class="p-4 border border-gray-600 rounded-lg"
               ></textarea>
               <button
                 type="submit"
@@ -833,4 +882,24 @@
       </div>
     </footer>
   </body>
+  <script>
+    const menuButton = document.querySelector(".menu-btn");
+    const menu = document.querySelector(".modal");
+    const close = document.querySelector(".close");
+    const menusvg = document.querySelector(".menu-svg");
+    let modal = false;
+    menuButton.addEventListener("click", () => {
+      if (!modal) {
+        menu.classList.add("hidden");
+        modal = true;
+        close.classList.add("hidden");
+        menusvg.classList.remove("hidden");
+        return;
+      }
+      menu.classList.remove("hidden");
+      close.classList.remove("hidden");
+      menusvg.classList.add("hidden");
+      modal = false;
+    });
+  </script>
 </html>
